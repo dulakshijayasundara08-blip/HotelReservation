@@ -12,6 +12,26 @@
         <servlet-name>BookingServlet</servlet-name>
         <servlet-class>com.hotel.controller.BookingServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddRoomServlet</servlet-name>
+        <servlet-class>com.hotel.controller.AddRoomServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HotelReportServlet</servlet-name>
+        <servlet-class>com.hotel.controller.HotelReportServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RoomListServlet</servlet-name>
+        <servlet-class>com.hotel.controller.RoomListServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BookRoomServlet</servlet-name>
+        <servlet-class>com.hotel.controller.BookRoomServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewBookingsServlet</servlet-name>
+        <servlet-class>com.hotel.controller.ViewBookingsServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -23,6 +43,26 @@
     <servlet-mapping>
         <servlet-name>BookingServlet</servlet-name>
         <url-pattern>/BookingServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddRoomServlet</servlet-name>
+        <url-pattern>/AddRoomServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HotelReportServlet</servlet-name>
+        <url-pattern>/HotelReportServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RoomListServlet</servlet-name>
+        <url-pattern>/RoomListServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookRoomServlet</servlet-name>
+        <url-pattern>/BookRoomServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewBookingsServlet</servlet-name>
+        <url-pattern>/ViewBookingsServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

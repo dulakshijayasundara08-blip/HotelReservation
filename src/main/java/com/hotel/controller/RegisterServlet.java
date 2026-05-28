@@ -25,10 +25,13 @@ public class RegisterServlet extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        String phone = request.getParameter("phone");
         
-        // 2. ලබාගත් දත්ත ටික Customer Model එකට ඇතුලත් කිරීම
-        Customer customer = new Customer(name, email, password, phone);
+        // 2. ලබාගත් දත්ත ටික Setters හරහා Customer Model එකට ඇතුලත් කිරීම
+        Customer customer = new Customer();
+        customer.setName(name);
+        customer.setEmail(email);
+        customer.setPassword(password);
+        customer.setRole("customer"); // Default Role එක 'customer' ලෙස දමනවා
         
         // 3. CustomerDAO එක පාවිච්චි කරලා Database එකට සේව් කිරීම
         CustomerDAO customerDAO = new CustomerDAO();
@@ -38,7 +41,7 @@ public class RegisterServlet extends HttpServlet {
         if (isSuccess) {
             out.println("<script type='text/javascript'>");
             out.println("alert('Registration Successful!');");
-            out.println("window.location.href='register.jsp';"); // ආපහු රෙජිස්ටර් පිටුවටම යවනවා
+            out.println("window.location.href='login.jsp';"); // රෙජිස්ටර් වුනාම කෙලින්ම ලොගින් පේජ් එකට යවමු
             out.println("</script>");
         } else {
             out.println("<script type='text/javascript'>");

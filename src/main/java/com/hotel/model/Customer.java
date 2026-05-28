@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.hotel.model;
 
 public class Customer {
@@ -9,20 +5,19 @@ public class Customer {
     private String name;
     private String email;
     private String password;
-    private String phone;
+    private String role; // අලුතින් එකතු කලා
 
-    // Default Constructor (හිස් කන්ස්ට්‍රක්ටර් එකක්)
     public Customer() {}
 
-    // Constructor with parameters (දත්ත එකපාර ඇතුලත් කරන්න හදන කන්ස්ට්‍රක්ටර් එකක්)
-    public Customer(String name, String email, String password, String phone) {
+    public Customer(int id, String name, String email, String password, String role) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.phone = phone;
+        this.role = role;
     }
 
-    // Getters and Setters (දත්ත ඇතුලත් කිරීමට සහ ලබා ගැනීමට පාවිච්චි කරන මෙතඩ්ස්)
+    // Getters and Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -35,7 +30,6 @@ public class Customer {
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 
-    public String getPhone() { return phone; }
-    public void setPhone(String phone) { this.phone = phone; }
+    public String getRole() { return role; }
+    public void setRole(String role) { this.role = role; }
 }
-
